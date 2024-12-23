@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button {
+            background-color: aqua;
+            border: 0;
+            padding: 10px;
+            transition: 2s;
+        }
+
+        /*เมื่อเมาส์ไปชี้จะเปลี่นนสี*/
+        .button:hover {
+            background-color: red;
+        }
+
+        /*คลิกแล้วเปลี่นนสี*/
+        .button:active {
+            background-color: yellowgreen;
+        }
+
+        .button:focus {
+            background-color: purple;
+        }
+
+        input:focus {
+            background-color: violet;
+        }
+
+        /*การใช้เรียกลูกตามลำดับ*/
+        .container .item:first-child {
+            background-color: red;
+        }
+
+        .container .item.item:nth-child(2) {
+            background-color: green;
+        }
+
+        .container .item.item:nth-child(3) {
+            background-color: purple;
+        }
+
+        .container .item.item:nth-child(4) {
+            background-color: orange;
+        }
+
+        .container .item:last-child {
+            background-color: violet;
+        }
+    </style>
+</head>
+
+<body>
+    <!--1. hover = วาง active = คลิก focus = cursor-->
+    <input type="text">
+    <button class="button">Button</button>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+
+    </div>
+</body>
+
+</html>
