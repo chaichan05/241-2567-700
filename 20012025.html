@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            background-color: red;
+        }
+
+        @media screen and (max-width: 700px) {
+            .container {
+                background-color: blue;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        hello world braekpoint
+
+    </div>
+    <picture>
+        <source media="(max-width: 700px)" 
+        srcset = "https://picsum.photos/id/237/536/354"> 
+        <img 
+        src="https://picsum.photos/id/870/536/354?grayscale&blur=2">
+    </picture>
+
+</body>
+
+</html>
+
+โค้ดด้านบนเป็นการใช้งาน media query ในการเปลี่ยนสีพื้นหลังของ container โดยเมื่อหน้าจอมีความกว้างไม่เกิน 700px จะเปลี่ยนสีพื้นหลังเป็นสีน้ำเงิน และใช้งาน picture element ในการแสดงรูปภาพ โดยใช้ source element ในการกำหนดรูปภาพที่จะแสดงเมื่อหน้าจอมีความกว้างไม่เกิน 700px และใช้ img element ในการกำหนดรูปภาพที่จะแสดงเมื่อหน้าจอมีความกว้างมากกว่า 700px
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .container.item {
+            padding: 10px;
+            flex: 1;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            ;
+        }
+
+        .grid-container.item {
+            padding: 10px;
+            background-color: yellow;
+            flex: 1;
+        }
+        /*tablet style*/
+        @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .grid-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+            
+            /*Mobile style*/
+        @media screen and (max-width: 640px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">Item1</div>
+        <div class="item">Item2</div>
+    </div>
+    <div class="grid-container">
+        <div class="item">Item1</div>
+        <div class="item">Item2</div>
+        <div class="item">Item3</div>
+        <div class="item">Item4</div>
+        <div class="item">Item5</div>
+        <div class="item">Item6</div>
+    </div>
+
+</body>
+
+</html>
