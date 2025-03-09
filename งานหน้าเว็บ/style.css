@@ -8,7 +8,8 @@ body {
 }
 
 .container {
-    width: 400px;
+    
+    width: 100%;
     max-width: 640px;
     margin-left: auto;
     margin-right: auto;
@@ -35,22 +36,50 @@ body {
     margin-bottom: 10px;
 }
 
-input.form, textarea {
-    border: 1px solid #ccc;
-    width: 100%;
-}
 .center {
     text-align: center;
 }
+
+input.form,
+textarea {
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.center {
+    text-align: center;
+}
+
 .button {
-    border:1px solid black;
+    border: 1px solid black;
     width: 50%;
     height: 40px;
+    background-color: white;
+    color: black;
+    transition-duration: 0.4s;
+    transition-duration: 0.4s;
 }
+
+.button:hover {
+    background-color: lightgray
+}
+
+.button:active {
+    background-color: gray;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  
+.button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
 .message {
     margin-top: 20px;
+    margin-bottom: 20px;
+    ;
     padding: 10px;
-    background-color: lightgray ;
+    background-color: lightgray;
     display: none;
 }
 
@@ -69,10 +98,12 @@ input.form, textarea {
     .flex {
         flex-direction: column;
     }
-    .header{
+
+    .header {
         font-size: 24px;
     }
-    .button{
+
+    .button {
         width: 100%;
     }
 }

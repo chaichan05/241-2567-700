@@ -4,8 +4,8 @@ const mysql = require('mysql2/promise');
 const cors = require('cors');
 const app = express();
 
-
 const port = 8000;
+
 app.use(bodyParser.json());
 app.use(cors());
 
@@ -72,9 +72,9 @@ app.post('/users', async (req, res) => {
     } catch (error) {
         const errorsMessage = error.message || 'something went wrong'
         const errors = error.errors || []
-        console.log("error:", error.message)
+        console.log('error message:', error.message)
         res.status(500).json({
-            message: errorsMessage ,
+            message: errorsMessage,
             errors: errors
         })
     }

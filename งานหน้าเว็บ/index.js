@@ -34,13 +34,13 @@ const submitData = async () => {
 
     try {
         let interest = '';
+
         for (let i = 0; i < interestDOMs.length; i++) {
             interest += interestDOMs[i].value
             if (i != interestDOMs.length - 1) {
                 interest += ","
             }
         }
-
 
 
         let userData = {
@@ -51,10 +51,8 @@ const submitData = async () => {
             description: descriptionDOM.value,
             interest: interest
         }
-
         console.log("submitData", userData);
 
-        /*
         const errors = validateData(userData);
 
         if (errors.length > 0) {
@@ -64,33 +62,32 @@ const submitData = async () => {
                 errors: errors
             }
         }
-*/
 
-        const respones = await axios.post('http://localhost:8000/users', userData)
-        console.log("respones", respones.data);
+
+        const respone = await axios.post('http://localhost:8000/users', userData)
+        console.log("respone", respone.data);
         messageDOM.innerText = "บันทึกข้อมูลสำเร็จ"
         messageDOM.className = "message success"
+
     } catch (error) {
-        console.log("error.message", error.message);
-        console.log("error", error.errors);
-
-        if (error.respones) {
-            console.log("error", error.respones.data.message);
-            error.message = error.respones.data.message
-            error.errors = error.respones.data.errors
+        console.log('error message', error.message)
+        console.log('error', error.erros)
+        if (error.response) {
+            console.log(error.response)
+            error.message = error.response.data.message
+            error.errors = error.response.data.errors
         }
-
-
         let htmlData = '<div>'
-        htmlData += `<div> ${error.errors} </div>`
+        htmlData += `<div>${error.message}</div>`
         htmlData += '<ul>'
         for (let i = 0; i < error.errors.length; i++) {
-            htmlData += `<li> ${error.errors[i]} + </li>`
+            htmlData += `<li>${error.errors[i]}</li>`
         }
         htmlData += '</ul>'
-        htmlData += '</div>'
+        htmlData += '<div>'
 
-        messageDOM.innerText = "บันทึกข้อมูลไม่สำเร็จ"
-        messageDOM.className = "message danger"
+
+        messageDOM.innerHTML = htmlData
+        messageDOM.className = 'message danger'
     }
 }
