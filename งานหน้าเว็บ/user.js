@@ -16,9 +16,15 @@ const loadData = async () => {
     for (let i = 0; i < respone.data.length; i++) {
         let user = respone.data[i]
         htmlData += `<div>
-        ${user.id} ${user.firstname} ${user.lastname}
-        <a href='index.html?id=${user.id}'><button >Edit</button></a>
-        <button class = 'delete' data-id='${user.id}'>delete</button>
+        <table style="width:100%">
+            <tr>
+                <td style="width:5%"> ${user.id} </td> 
+                <td style="width:35%"> ${user.firstname} </td> 
+                <td style="width:35%"> ${user.lastname}  </td> 
+                <td style="width:10%"> <a href='index.html?id=${user.id}'><button class="button1">Edit</button></a> </td> 
+                <td style="width:10%"> <button class="button1" class = 'delete' data-id='${user.id}'>delete</button> </td> 
+            </tr>
+        </table>
         </div >`
     }
     htmlData += '</div>'

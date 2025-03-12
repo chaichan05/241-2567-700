@@ -12,7 +12,6 @@ window.onload = async () => {
 
         //1. เราจะดึงข้อมูล user ที่ต้องการแก้ไข
 
-
         try {
             const respone = await axios.get(`${BASE_URL}/users/${id}`)
             const user = respone.data
