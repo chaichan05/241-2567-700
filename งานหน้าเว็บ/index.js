@@ -47,7 +47,6 @@ window.onload = async () => {
     }
 }
 
-
 const validateData = (userData) => {
     let errors = []
 
@@ -133,11 +132,12 @@ const submitData = async () => {
             error.message = error.response.data.message
             error.errors = error.response.data.errors
         }
+
         let htmlData = '<div>'
         htmlData += `<div>${error.message}</div>`
         htmlData += '<ul>'
         for (let i = 0; i < error.errors.length; i++) {
-            htmlData += `<li>${error.errors[i]}</li>`
+            htmlData += `<li> ${error.errors[i]} </li>`;
         }
         htmlData += '</ul>'
         htmlData += '<div>'

@@ -3,21 +3,37 @@
     src: url('./Kanit/Kanit-Regular.ttf');
 }
 
+.contain {
+    align-items: center;
+    background:url(https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnBraW9pM2t1ZzR1OHVkOWVobWk2b3liNzVibnJqbDc3eDV0ZnZsZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sNUvWjjQUP4m0uEoB7/giphy.gif);
+    background-size: cover;
+
+}
+
 .borderimg {
-    background-color: aquamarine;
+    backdrop-filter:blur(10px); ;
     width: 100%;
     height: 50px;
     margin-top: 20px;
-    font-size: larger;
+    font-size: x-large;
     text-align: center;
+    border: 1px solid white;
+    border-radius: 10px ;
 }
 
+body {
+    backdrop-filter: blur(10px);
+    background: transparent;
+}
 .table1 {
-    background-color: gray;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border: 1px solid white;
+    color: white;
 }
 
 table,th,td {
-    border: 1px solid black;
+    border: 1px solid white;
     border-collapse: collapse;
     max-width: 100%;
 }
@@ -33,7 +49,9 @@ table,th,td {
     transition-duration: 0.4s;
     transition-duration: 0.4s;
 }
-
+.user {
+    color: white;
+}
 .button:hover {
     background-color: lightgray
 }

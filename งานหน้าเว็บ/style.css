@@ -12,23 +12,20 @@ body {
     min-height: 100vh;
     align-items: center;
     display: flex;
-    background-color: #404040;
+    background: url(https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnBraW9pM2t1ZzR1OHVkOWVobWk2b3liNzVibnJqbDc3eDV0ZnZsZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sNUvWjjQUP4m0uEoB7/giphy.gif);
     background-size: cover;
     background-position: center;
-
 }
 
 
 .container {
-
-    width: 1000%;
-    height: 1000%;
+    width: 640px;
+    height: 640px;
     max-width: 640px;
     margin-left: auto;
     margin-right: auto;
     background: transparent;
-    backdrop-filter: blur(100px);
-    border: 2px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
     padding: 30px 40px;
     border-radius: 10px;
     box-shadow: 0 0 100px white
@@ -73,8 +70,9 @@ body {
 
 input.form,
 textarea {
-    border: 1px solid #ccc;
     width: 100%;
+    border-radius: 10px;
+    border: 1px solid #ccc;
 }
 
 .center {
@@ -89,6 +87,8 @@ textarea {
     color: black;
     transition-duration: 0.4s;
     transition-duration: 0.4s;
+    border-radius: 10px;
+    border: 1px solid #ccc;
 }
 
 .button:hover {
@@ -106,12 +106,14 @@ textarea {
 }
 
 .message {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    ;
-    padding: 10px;
-    background-color: lightgray;
-    display: none;
+    position: fixed;
+    top: 10px;
+    right: -400px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    display: none; 
 }
 
 .message.success {
@@ -121,6 +123,8 @@ textarea {
 
 .message.danger {
     background-color: lightcoral;
+    margin-left: 100%; 
+    width: 50%; 
     display: block;
 }
 
@@ -132,8 +136,7 @@ textarea {
 
 .button1 {
     margin-left: 460px;
-    margin-top: 30px;
-    margin-bottom: 30%;
+    margin-top: -500px;
     border-radius: 12px;
     border: 1px solid black;
     width: 30%;
@@ -142,10 +145,14 @@ textarea {
     color: black;
     transition-duration: 0.4s;
     transition-duration: 0.4s;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
 }
 
 .button1:hover {
     background-color: lightgray
+    
 }
 
 .button1:active {
