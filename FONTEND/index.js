@@ -142,7 +142,6 @@ const submitData = async () => {
         htmlData += '</ul>'
         htmlData += '<div>'
 
-
         messageDOM.innerHTML = htmlData
         messageDOM.className = 'message danger'
     }

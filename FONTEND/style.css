@@ -68,6 +68,9 @@ body {
     margin-right: 300px;
 }
 
+form{
+    margin-left: 10px;
+}
 input.form,
 textarea {
     width: 100%;
@@ -106,19 +109,23 @@ textarea {
 }
 
 .message {
-    position: fixed;
-    top: 10px;
-    right: -400px;
     padding: 10px 15px;
     border-radius: 5px;
     color: white;
     font-weight: bold;
-    display: none; 
+    position: center;
 }
 
 .message.success {
     background-color: lightgreen;
+    width: 50%;
     display: block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 25%;
+    box-shadow: 0 0 100px lightgreen;
 }
 
 .message.danger {
@@ -126,6 +133,12 @@ textarea {
     margin-left: 100%; 
     width: 50%; 
     display: block;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 25%;
+    box-shadow: 0 0 100px red;
+    margin-top: -40%;
 }
 
 .h2 {

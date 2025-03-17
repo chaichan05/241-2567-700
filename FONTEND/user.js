@@ -22,7 +22,7 @@ const loadData = async () => {
                 <td style="width:35%"> ${user.firstname} </td> 
                 <td style="width:35%"> ${user.lastname}  </td> 
                 <td style="width:10%"> <a href='index.html?id=${user.id}'><button class="button1">Edit</button></a> </td> 
-                <td style="width:10%"> <button class="button1" class = 'delete' data-id='${user.id}'>delete</button> </td> 
+                <td style="width:10%"> <button class = 'delete' data-id='${user.id}'>delete</button> </td> 
             </tr>
         </table>
         </div >`
